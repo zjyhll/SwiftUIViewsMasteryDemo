@@ -45,6 +45,15 @@ struct PopoverIntroduction: View {
     }
 }
 
+// On an iPad, the Popover does not cover entire screen and an arrow will be present.
+// Where the Popover appears depends on the property you set for arrowEdge.
+// You can actually omit the arrowEdge parameter and iOS will automatically add one
+// for you. (See next page for example.)
+// Note, there does not seem to be a way to control the size of the Popup view at this
+// time. One recommendation is to not add a background color to the popover view
+// because the arrow will not be colored. You can see an example of this on the next
+// page.
+
 struct PopoverIntroduction_Previews: PreviewProvider {
     static var previews: some View {
         PopoverIntroduction()
