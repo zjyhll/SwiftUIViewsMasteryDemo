@@ -66,6 +66,10 @@ struct CustomPopupPresentingWithBool: View {
     }
 }
 
+// The "Show Popup" button sets the State variable to true. The if statement is observing
+// changes to that State variable and when it changes, it gets re-evaluated and shows
+// a different view (the popup).
+
 struct CustomPopupPresentingWithBool_Previews: PreviewProvider {
     static var previews: some View {
         CustomPopupPresentingWithBool()
