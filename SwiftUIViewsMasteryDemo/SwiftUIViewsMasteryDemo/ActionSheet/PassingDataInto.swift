@@ -30,6 +30,7 @@ struct PassingDataInto: View {
                 .padding()
                 .font(.title)
                 .background(Color.yellow)
+                .foregroundColor(.black)
 
             Button("Show ActionSheet with Data") {
                 // 3. Making the Identifiable State var not nil will trigger showing the action sheet
