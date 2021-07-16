@@ -12,6 +12,7 @@ import SwiftUI
 // a View (.actionSheet) to bind the State variable to the presentation of your ActionSheet.
 
 struct ActionSheetIntroduction: View {
+    // 1. Create a state variable to control presenting the action sheet
     @State private var presented = false
     var body: some View {
         VStack(spacing: 20) {
@@ -27,25 +28,29 @@ struct ActionSheetIntroduction: View {
                 .foregroundColor(.white)
 
             Button(action: {
-
+                // 2. Change the state variable to trigger presenting the action sheet
+                presented = true
             }, label: {
                 Text("Show ActionSheet")
             })
-            .actionSheet(isPresented: $presented, content: {
-                ActionSheet(
-                    title: Text("Action Sheet Title"),
-                    message: Text("Action Sheet Message"),
-                    buttons: [
-                        .default(Text("Default Button"), action: {
-                            // default button code
-                        }),
-                        .destructive(Text("destructive Button"), action: {
-                            // destructive button code
-                        }),
-                        .cancel()
-                ])
-            })
         }
+        // 3. Use the action function to listen to the state variable for changes and
+        //    return an ActionSheet object when true
+        .actionSheet(isPresented: $presented, content: {
+            // Remember, the return keyboard is optional for single expressions
+            ActionSheet(
+                title: Text("Action Sheet Title"),
+                message: Text("Action Sheet Message"),
+                buttons: [
+                    .default(Text("Default Button"), action: {
+                        // default button code
+                    }),
+                    .destructive(Text("destructive Button"), action: {
+                        // destructive button code
+                    }),
+                    .cancel()
+            ])
+        })
     }
 }
 
