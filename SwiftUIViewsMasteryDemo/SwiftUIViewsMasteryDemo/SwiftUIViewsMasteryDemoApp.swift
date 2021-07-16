@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUIViewsMasteryDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            PopoverIntroduction()
+            PopoverColor()
 //            ContentView()
         }
     }
