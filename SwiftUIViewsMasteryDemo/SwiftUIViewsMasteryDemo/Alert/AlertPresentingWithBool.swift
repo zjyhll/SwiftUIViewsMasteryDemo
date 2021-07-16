@@ -2,7 +2,7 @@
 //  AlertPresentingWithBool.swift
 //  SwiftUIViewsMasteryDemo
 //
-//  Created by 刘勇刚 on 2021/7/17.
+//  Created by RecherJ on 2021/7/17.
 //
 
 import SwiftUI
