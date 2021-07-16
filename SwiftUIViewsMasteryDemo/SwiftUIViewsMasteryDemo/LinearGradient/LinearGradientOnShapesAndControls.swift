@@ -20,7 +20,7 @@ struct LinearGradientOnShapesAndControls: View {
             Text("You can apply gradients to shapes and controls using the fill and background modifiers respectively.")
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(Color.red)
+                .background(Color.pink)
                 .shadow(radius: 10)
 
             Capsule()
