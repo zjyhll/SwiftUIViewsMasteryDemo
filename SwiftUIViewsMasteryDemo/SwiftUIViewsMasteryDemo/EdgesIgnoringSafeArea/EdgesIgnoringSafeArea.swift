@@ -41,6 +41,16 @@ struct EdgesIgnoringSafeAreaIntroduction: View {
 
 struct EdgesIgnoringSafeAreaIntroduction_Previews: PreviewProvider {
     static var previews: some View {
-        EdgesIgnoringSafeAreaIntroduction()
+        Group {
+            EdgesIgnoringSafeAreaIntroduction()
+            EdgesIgnoringSafeAreaIntroduction()
+                .previewLayout(PreviewLayout.fixed(width: 896, height: 414))
+        }
     }
 }
+
+// You can immediately see that it could look better.
+// 1. You can ignore all the edges of the safe areas.
+// 2. When in landscape mode, you no longer need the extra padding at the top of the header.
+//
+// Let's see what you can do to handle these two issues.
