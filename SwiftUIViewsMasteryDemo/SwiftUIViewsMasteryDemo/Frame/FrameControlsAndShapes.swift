@@ -36,7 +36,7 @@ struct FrameControlsAndShapes: View {
             Text("Buttons pull in. Use frames to push them out:")
             Button(action: {}) {
                 Text("Button")
-            }   
+            }
             .frame(width: 200, height: 100)
             .border(Color.pink)
         }
