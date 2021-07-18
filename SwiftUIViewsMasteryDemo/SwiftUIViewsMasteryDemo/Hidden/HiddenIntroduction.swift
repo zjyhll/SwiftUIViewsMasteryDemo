@@ -38,7 +38,7 @@ struct HiddenIntroduction: View {
             } else {
                 OrangeRectangle()
                     .hidden()
-                    .overlay(   
+                    .overlay(
                         Text("This shape is hidden but it is still occupying space")
                             .foregroundColor(.orange)
                     )
