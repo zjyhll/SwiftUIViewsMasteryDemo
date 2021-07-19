@@ -27,6 +27,8 @@ struct OverlayIntroduction: View {
                             .font(.title)
                             .foregroundColor(.gray)
                         Image("Overlay")
+                            .resizable()
+                            .frame(width: 80, height: 80)
 
                         Text("In this example, we see a VStack on top of a Color view. This is another way in which you can priovide a background color an a screen.")
                             .frame(maxWidth: .infinity)
@@ -52,5 +54,6 @@ struct OverlayIntroduction: View {
 struct OverlayIntroduction_Previews: PreviewProvider {
     static var previews: some View {
         OverlayIntroduction()
+            .preferredColorScheme(.dark)
     }
 }
